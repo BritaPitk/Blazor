@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="C:\Users\brita\Documents\dev\BlazorApp\BlazorTutorial\site.css" Link="site.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\EmployeeManagement.Models\EmployeeManagement.Models.csproj" />
   </ItemGroup>
 
