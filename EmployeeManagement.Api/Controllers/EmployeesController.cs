@@ -75,8 +75,8 @@ namespace EmployeeManagement.Api.Controllers
             }
         }
         [HttpPost]
-        public async Task<ActionResult<Employee>>
-            CreateEmployee([FromBody] Employee employee)
+        public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
+            
         {
             try
             {
@@ -84,7 +84,7 @@ namespace EmployeeManagement.Api.Controllers
                 {
                     return BadRequest();
                 }
-                var emp = employeeRepository.GetEmployeeByEmail(employee.Email);
+                var emp = await employeeRepository.GetEmployeeByEmail(employee.Email);
 
                 if (emp != null)
                 {
